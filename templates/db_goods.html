@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    База данных товаров
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+    {% for good in goods %}
+        <p>
+            ID: {{ good.id }}
+            Название: {{ good.name }}
+            Описание: {{ good.description }}
+            Цена: {{ good.price }}
+        </p>
+    {% endfor %}
+    </div>
+{% endblock %}

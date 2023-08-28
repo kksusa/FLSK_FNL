@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    База данных заказов
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+    {% for offer in offers %}
+        <p>
+            ID заказа: {{ offer.id }}
+            ID пользователя: {{ offer.user_id }}
+            ID товара: {{ offer.good_id }}
+            Статус: {{ offer.status }}
+            Время заказа: {{ offer.cur_time }}
+        </p>
+    {% endfor %}
+    </div>
+{% endblock %}
